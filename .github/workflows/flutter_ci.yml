@@ -13,13 +13,13 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: '12.x'
-    - name: flutter action
+    - name: Flutter action
       uses: subosito/flutter-action@v1.1.1
-    - name: flutter pub get
+    - name: Flutter pub get
       run: flutter pub get
     - name: Flutter test
       run: flutter test
-    - name: flutter build apk
+    - name: Flutter build apk
       run: flutter build apk
     - name: Push APK to Releases
       uses: ncipollo/release-action@v1
