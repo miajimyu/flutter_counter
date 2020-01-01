@@ -15,6 +15,7 @@ jobs:
         channel: 'beta'
     - run: flutter pub get
     - run: flutter config --enable-web
+    - run: flutter create .
     - run: flutter build web
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
