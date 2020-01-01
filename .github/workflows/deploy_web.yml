@@ -17,8 +17,8 @@ jobs:
     - run: flutter config --enable-web
     - run: flutter create .
     - run: flutter build web
-    - uses: JamesIves/github-pages-deploy-action@releases/v3
-      with:
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        BRANCH: gh-pages
-        FOLDER: build/web
+    - uses: peaceiris/actions-gh-pages@v2.8.0
+      env:
+        ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+        PUBLISH_BRANCH: master
+        PUBLISH_DIR: ./build/web
